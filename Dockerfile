@@ -8,7 +8,7 @@ WORKDIR /app
 COPY main.py .
 
 # 安装依赖项并清理缓存
-RUN pip install --no-cache-dir requests && \
+RUN pip install --no-cache-dir requests beautifulsoup4 && \
     rm -rf /var/lib/apt/lists/*
 
 EXPOSE 30830
